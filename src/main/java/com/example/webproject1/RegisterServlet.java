@@ -27,6 +27,8 @@ public class RegisterServlet extends HttpServlet {
         System.out.println("提交的数据:" + username + password);
 
         //2 响应数据给客户端
+        resp.setCharacterEncoding("utf-8"); // 设置响应编码格式为utf-8
+        resp.setHeader("Content-type","text/html;charset = UTF-8");
         PrintWriter printWriter = resp.getWriter();
         printWriter.println("register success!");
     }
